@@ -269,7 +269,7 @@ def analyze_network(network_config):
     print(df.to_string(index=False)) 
     
     if network_config.get('braess_link'):
-        if ue_highest_used_cost_braess - ue_highest_used_cost_braess > 0.1:
+        if ue_highest_used_cost_braess - ue_highest_used_cost_no_braess > 0.1:
             print("CLASSIC BRAESS PARADOX CONFIRMED!!!") 
             print(f"   Adding the Braess link increased the highest used route cost (UE travel time) by: "
                   f"{ue_highest_used_cost_braess - ue_highest_used_cost_no_braess:.2f}")
